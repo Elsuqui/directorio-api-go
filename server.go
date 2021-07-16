@@ -1,18 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"io/fs"
-	"path/filepath"
-	"reflect"
-	"strings"
+	"apigolang/router"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	/*server := gin.Default()
+	server := gin.Default()
 	new(router.Routes).Boot(server)
-	server.Run()*/
-	pruebaInstancias()
+	server.Run()
+	//pruebaInstancias()
 	/*server.GET("/test", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "OK!!",
@@ -21,7 +19,7 @@ func main() {
 	server.Run(":8080")*/
 }
 
-func pruebaInstancias() string {
+/*func pruebaInstancias() string {
 	routePath := "router"
 
 	filepath.WalkDir(routePath, func(path string, d fs.DirEntry, err error) error {
@@ -35,4 +33,4 @@ func pruebaInstancias() string {
 	})
 
 	return ""
-}
+}*/
