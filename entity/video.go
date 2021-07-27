@@ -1,7 +1,8 @@
 package entity
 
 type Video struct {
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Url         string `json:"url"`
+	BaseModel   BaseModel `gorm:"embedded"`
+	Title       string    `gorm:"type:varchar(255)" json:"title"`
+	Description string    `gorm:"type:varchar(255)" json:"description"`
+	Url         string    `gorm:"type:varchar(255)" json:"url"`
 }

@@ -4,19 +4,18 @@ import (
 	"apigolang/router"
 
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// Load env file to set security or credentials information
+	err := godotenv.Load()
+	if err != nil {
+		panic("Env file is required")
+	}
 	server := gin.Default()
 	new(router.Routes).Boot(server)
 	server.Run()
-	//pruebaInstancias()
-	/*server.GET("/test", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "OK!!",
-		})
-	})
-	server.Run(":8080")*/
 }
 
 /*func pruebaInstancias() string {
