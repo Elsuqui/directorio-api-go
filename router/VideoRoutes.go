@@ -16,7 +16,8 @@ func (videoR *VideoRoutes) InitializeRoutes(serverRoute *gin.Engine) {
 	video := serverRoute.Group("/video")
 	// Create routes
 	{
-		video.GET("/", func(c *gin.Context) { c.JSON(200, videoR.videoC.Index()) })
-		video.POST("/", func(c *gin.Context) { c.JSON(200, videoR.videoC.Store(c)) })
+		//video.GET("/", func(c *gin.Context) { c.JSON(200, videoR.videoC.Index()) })
+		video.GET("/", videoR.videoC.Index())
+		video.POST("/", videoR.videoC.Store())
 	}
 }
