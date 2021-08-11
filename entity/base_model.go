@@ -7,8 +7,8 @@ import (
 )
 
 type BaseModel struct {
-	Id        uint64         `gorm:"primary_key:auto_increment" json:"id"`
-	CreatedAt time.Time      `json:"created_at"`
-	UpdatedAt time.Time      `json:"updated_at"`
-	DeletedAt gorm.DeletedAt `gorm:"index"`
+	ID        uint64         `gorm:"primary_key:auto_increment" json:"id"`
+	CreatedAt time.Time      `gorm:"type:datetime" json:"created_at"`
+	UpdatedAt time.Time      `gorm:"type:datetime" json:"updated_at"`
+	DeletedAt gorm.DeletedAt `gorm:"type:datetime;index"`
 }

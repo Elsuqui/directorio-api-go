@@ -8,8 +8,7 @@ import (
 
 // Define struct to declare all groups of routes divided by modules
 type Router struct {
-	VideosRoutes VideoRoutes
-	PruebaRoutes PruebaRoute
+	VideosRoutes ExampleRoutes
 }
 
 // Function to initialize all api routes
