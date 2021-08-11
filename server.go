@@ -14,22 +14,6 @@ func main() {
 		panic("Env file is required")
 	}
 	server := gin.Default()
-	new(router.Routes).Boot(server)
+	new(router.Router).Boot(server)
 	server.Run()
 }
-
-/*func pruebaInstancias() string {
-	routePath := "router"
-
-	filepath.WalkDir(routePath, func(path string, d fs.DirEntry, err error) error {
-		dir := strings.TrimSuffix(d.Name(), ".go")
-		//fmt.Println(dir)
-		if dir != routePath {
-			fmt.Println(reflect.TypeOf(dir))
-			//dynamicObj = new(reflect.)
-		}
-		return err
-	})
-
-	return ""
-}*/

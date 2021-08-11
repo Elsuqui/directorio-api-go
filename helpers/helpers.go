@@ -22,3 +22,9 @@ func GetEnvParam(key string) string {
 	}
 	return value
 }
+
+func HandleError(err error, message string) {
+	if err != nil {
+		panic(message)
+	}
+}

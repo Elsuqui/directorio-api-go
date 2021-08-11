@@ -8,8 +8,8 @@ import (
 )
 
 type VideoInterface interface {
-	Index() []entity.Video
-	Store(*gin.Context) entity.Video
+	Index() gin.HandlerFunc
+	Store() gin.HandlerFunc
 }
 
 type VideoController struct {
